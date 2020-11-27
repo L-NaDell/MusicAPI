@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DemoRecipeAPI
+namespace DemoMusicAPI
 {
     public class Program
     {

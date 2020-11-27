@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace DemoRecipeAPI.Data.Migrations
+namespace DemoMusicAPI.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

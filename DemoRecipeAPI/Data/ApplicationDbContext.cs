@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DemoRecipeAPI.Data
+namespace DemoMusicAPI.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

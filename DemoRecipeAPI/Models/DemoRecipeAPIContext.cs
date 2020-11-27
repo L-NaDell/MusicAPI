@@ -2,15 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace DemoRecipeAPI.Models
+namespace DemoMusicAPI.Models
 {
-    public partial class DemoRecipeAPIContext : DbContext
+    public partial class DemoMusicAPIContext : DbContext
     {
-        public DemoRecipeAPIContext()
+        public DemoMusicAPIContext()
         {
         }
 
-        public DemoRecipeAPIContext(DbContextOptions<DemoRecipeAPIContext> options)
+        public DemoMusicAPIContext(DbContextOptions<DemoMusicAPIContext> options)
             : base(options)
         {
         }
@@ -28,7 +28,7 @@ namespace DemoRecipeAPI.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=DemoRecipeAPI;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=DemoMusicAPI;Trusted_Connection=True;");
             }
         }
 
