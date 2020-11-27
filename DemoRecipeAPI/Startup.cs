@@ -1,5 +1,5 @@
-using DemoRecipeAPI.Data;
-using DemoRecipeAPI.Models;
+using DemoMusicAPI.Data;
+using DemoMusicAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DemoRecipeAPI
+namespace DemoMusicAPI
 {
     public class Startup
     {
@@ -28,7 +28,7 @@ namespace DemoRecipeAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DemoRecipeAPIContext>(options =>
+            services.AddDbContext<DemoMusicAPIContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<ApplicationDbContext>(options =>

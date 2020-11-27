@@ -1,6 +1,6 @@
 using System;
 
-namespace DemoRecipeAPI.Models
+namespace DemoMusicAPI.Models
 {
     public class ErrorViewModel
     {

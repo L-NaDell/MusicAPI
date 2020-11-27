@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DemoRecipeAPI.Models
+namespace DemoMusicAPI.Models
 {
     public partial class AspNetRoles
     {

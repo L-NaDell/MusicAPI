@@ -1,4 +1,4 @@
-﻿using DemoRecipeAPI.Models;
+﻿using DemoMusicAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DemoRecipeAPI.Controllers
+namespace DemoMusicAPI.Controllers
 {
     public class HomeController : Controller
     {
