@@ -1,3 +1,4 @@
+using DemoMusicAPI.ApiProvider;
 using DemoMusicAPI.Data;
 using DemoMusicAPI.Entities.Configuration;
 using DemoMusicAPI.Models;
@@ -26,6 +27,8 @@ namespace DemoMusicAPI
             var apiConfig = new ApiConfiguration();
             Configuration.GetSection("ApiConfiguration").Bind(apiConfig);
             services.AddSingleton(apiConfig);
+
+            services.AddSingleton<ISongApiProvider, SongApiProvider>();
 
             services.AddDbContext<DemoMusicAPIContext>(options =>
                 options.UseSqlServer(

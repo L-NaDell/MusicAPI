@@ -1,26 +1,35 @@
-﻿using DemoMusicAPI.Models;
+﻿using DemoMusicAPI.ApiProvider;
+using DemoMusicAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace DemoMusicAPI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ISongApiProvider _songApiProvider;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ISongApiProvider songApiProvider)
         {
-            _logger = logger;
+            _songApiProvider = songApiProvider;
         }
 
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult SearchSongsForm()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> SearchSongs(string artist)
+        {
+            var songList = await _songApiProvider.SearchSongs(artist);
+
+            return View("SongList", songList);
         }
 
         public IActionResult Privacy()

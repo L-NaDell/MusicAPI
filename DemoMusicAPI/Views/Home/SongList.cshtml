@@ -1,0 +1,113 @@
+﻿@model IEnumerable<DemoMusicAPI.Entities.Song>
+
+@{
+    ViewData["Title"] = "SongList";
+}
+
+<h1>SongList</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.readable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title_short)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title_version)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.link)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.explicit_lyrics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.explicit_content_lyrics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.explicit_content_cover)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.preview)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.md5_image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.readable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title_short)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title_version)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.link)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.explicit_lyrics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.explicit_content_lyrics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.explicit_content_cover)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.preview)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.md5_image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
